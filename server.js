@@ -1,6 +1,10 @@
 const express = require('express');
+const connectDB = require('./config/db')
 
 const app = express();
+
+//conncet
+connectDB();
 
 app.get('/',(req,res)=>res.json({msg:'Welcome to contact manger Home page'}));
 
